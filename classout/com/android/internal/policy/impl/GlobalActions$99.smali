@@ -41,18 +41,18 @@
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$99;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$200(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$000(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const-string v2, "Restart Method"
+    const-string v2, "Reboot Menu"
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
-	
+
     sget-object v2, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->rebootOptions:[Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -98,7 +98,7 @@
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$99;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$200(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$000(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_52
+    if-nez v1, :cond_58
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -120,7 +120,7 @@
 
     invoke-virtual {v1, v5, v5}, Landroid/view/Window;->setFlags(II)V
 
-    :cond_52
+    :cond_58
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     return-void
